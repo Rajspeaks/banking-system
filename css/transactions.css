@@ -1,0 +1,67 @@
+body {
+  background-color: #f6ecf0;
+  font-family: "Roboto", cursive;
+  font-weight: bolder;
+}
+
+.main-heading {
+  font-family: "Raleway", cursive;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  margin-top: 1.875rem;
+  text-align: center;
+}
+
+.header i {
+  color: black;
+  background-color: #8ac4d0;
+  border-radius: 50%;
+  position: absolute;
+  right: 70px;
+  top: 40px;
+  opacity: 0.6;
+}
+
+.header i:hover {
+  opacity: 0.8;
+}
+
+.customer-table {
+  padding: 5% 0;
+  padding-left: 25%;
+}
+
+table th, td {
+  border: 1px solid white;
+  width: 30%;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 1.3rem;
+}
+
+th {
+  font-family: "Raleway", cursive;
+  color: #ffffff;
+  border-radius: 5px;
+  background-image: linear-gradient(#1687a7, #276678);
+}
+
+td {
+  color: black;
+  background-color: #d3e0ea;
+  opacity: 0.7;
+}
+
+td:hover {
+  opacity: 1.0;
+}
+
+.button {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.my-btn {
+  margin-left: 5%;
+  font-weight: bolder;
+}
