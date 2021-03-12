@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/transactions.css">
+
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- Back to Home Page -->
+
+  <div class="header">
+    <h1 class="main-heading">Make Transactions</h1>
+    <a href="index.html"><i class="fas fa-home fa-3x"></i></a>
+  </div>
+
+  <!-- Modal send money -->
+  <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="input-group mb-3">
+              <input type="text" id="enterSName" class="form-control" placeholder="Sender's username" aria-label="Sender's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" id="enterName" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Rs</span>
+              </div>
+              <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount" aria-label="Amount">
+              <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+            Money</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal transaction History-->
+  <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ol id="transaction-history-body">
+
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Table -->
+
+  <div class="customer-table">
+
+    <table>
+      <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Email-Id</th>
+        <th>Amount</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>customer1</td>
+        <td>customer1@gmail.com</td>
+        <td>
+          <p id="customer1BankBalance">25000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>customer2</td>
+        <td>customer2@gmail.com</td>
+        <td>
+          <p id="customer2BankBalance">55000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>customer3</td>
+        <td>customer3@gmail.com</td>
+        <td>
+          <p id="customer3BankBalance">35000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>customer4</td>
+        <td>customer4@gmail.com</td>
+        <td>
+          <p id="customer4BankBalance">25000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>customer5</td>
+        <td>customer5@gmail.com</td>
+        <td>
+          <p id="customer5BankBalance">35000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>customer6</td>
+        <td>customer6@gmail.com</td>
+        <td>
+          <p id="customer6BankBalance">45500</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>7</td>
+        <td>customer7</td>
+        <td>customer7@gmail.com</td>
+        <td>
+          <p id="customer7BankBalance">55000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>8</td>
+        <td>customer8</td>
+        <td>customer8@gmail.com</td>
+        <td>
+          <p id="customer8BankBalance">55500</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>9</td>
+        <td>customer9</td>
+        <td>customer9@gmail.com</td>
+        <td>
+          <p id="customer9BankBalance">20000</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td>10</td>
+        <td>customer10</td>
+        <td>customer10@gmail.com</td>
+        <td>
+          <p id="customer10BankBalance">12000</p>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+  </section>
+
+  <div class="button">
+
+    <button class="btn btn-outline-info btn-lg my-btn" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+    <a class="btn btn-outline-info btn-lg my-btn" href="history.html" data-toggle="modal" data-target="#transactionHistory">See All Transactions</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+
+</html
